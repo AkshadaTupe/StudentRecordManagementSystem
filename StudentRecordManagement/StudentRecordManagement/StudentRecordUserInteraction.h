@@ -14,14 +14,15 @@ public:
 
     string choice;
 
-    vector<studentRecord> records;
+    void getUserChoice(string& filePath, bool isFileEmpty);
 
-    void getUserChoice(string& filePath);
+    vector<studentRecord> createStudentRecord();
 
-    void createStudentRecord();
+    vector<studentRecord> getStudentRecord();
 
+    int noOfStudentsRecords;
 private:
-    void processChoice(string& choice,string& filePath);
+    void processChoice(string& choice,string& filePath,bool isFileEmpty);
     
     CStudentRecordFileHandling* fileHandler;
 

@@ -1,7 +1,5 @@
 #pragma once
-
 #include "stdafx.h"
-
 
 class CStudentRecordFileHandling : public Logger
 {
@@ -18,15 +16,20 @@ public:
     
     string createCSVFile(string fileName);
     
-    void dumpDataIntoCSV(const std::vector<studentRecord> &records, string& filePath);
+    void dumpDataIntoEmptyCSV(const std::vector<studentRecord> &records, string& filePath);
+
+    void addUserData(const std::vector<studentRecord> &records, string& filePath);
   
     string filePath;
     
+    bool isFileEmpty(const string &fileName);
+
+    void viewStudentData(string& filePath);
 private:
     
 
     bool fileExits(const std::string &fileName);
 
-    bool isFileEmpty(const string &fileName);
+   
    
 };

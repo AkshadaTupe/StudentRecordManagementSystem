@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "StudentRecordFileHandling.h"
 #include "StudentRecordUserInteraction.h"
-
+#include <sstream>
 
 // Function to check if file is already present with same file Name
 bool CStudentRecordFileHandling::fileExits(const std::string &fileName)
@@ -29,9 +29,6 @@ string CStudentRecordFileHandling::createCSVFile(string fileName)
     if (fileExits(filePath))
     {       
         Debug("File with same fileName already exists");
-
-        if(isFileEmpty(filePath))
-            Debug("File is Empty");
     }
     else
     {
@@ -49,18 +46,17 @@ string CStudentRecordFileHandling::createCSVFile(string fileName)
         File.close();
     }
     return filePath;
-   
 }
 
-void CStudentRecordFileHandling::dumpDataIntoCSV(const std::vector<studentRecord> &records, string& filePath)
+void CStudentRecordFileHandling::dumpDataIntoEmptyCSV(const std::vector<studentRecord> &records, string& filePath)
 {
     ofstream file(filePath);
 
     if (!file.is_open())
         Error("Error Opening File");
 
-    //write header TO CSV File
-    file << "StudentName,StudentId,StudentDOB,StudentGender,StudentCourse" << std::endl;
+     //write header TO CSV File
+     file << "StudentName,StudentId,StudentDOB,StudentGender,StudentCourse" << std::endl;
 
     //write data to CSV File
     for (const auto &data : records)
@@ -74,4 +70,48 @@ void CStudentRecordFileHandling::dumpDataIntoCSV(const std::vector<studentRecord
     file.close();
 
     Debug("Data has been successfully written into csv file");
+}
+
+void CStudentRecordFileHandling::addUserData(const std::vector<studentRecord> &records, string& filePath)
+{
+    ofstream file(filePath, std::ios::app);
+    if (!file.is_open())
+        Error("Error Opening File");
+
+    for (const auto &data : records)
+    {
+        file << data.studentName << ","
+            << data.studentId << ","
+            << data.studentDOB << ","
+            << data.studentGender << ","
+            << data.studentCourse << endl;
+    }
+    file.close();
+
+    Debug("Data has been successfully written into csv file");
+}
+
+void CStudentRecordFileHandling::viewStudentData(string& filePath)
+{
+    ifstream file(filePath);
+
+    if (!file.is_open())
+        Error("Error Opening File");
+
+    std::string line;
+    while (std::getline(file, line)) {
+        std::istringstream iss(line);
+        std::string token;
+
+        // Display each token (comma-separated values) in the line
+        while (std::getline(iss, token, ',')) {
+            std::cout << token << " | ";
+        }
+
+        // Move to the next line
+        std::cout << std::endl;
+    }
+
+    // Close the file
+    file.close();
 }
