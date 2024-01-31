@@ -19,6 +19,9 @@
     <Filter Include="Source Files\UserInteraction">
       <UniqueIdentifier>{263e3424-ec0a-4ca4-837b-4bfff6c6bc54}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\FileTransfer">
+      <UniqueIdentifier>{7a636bfa-c6f7-437b-9e77-f180019575ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -39,6 +42,9 @@
     <ClInclude Include="StudentRecordUserInteraction.h">
       <Filter>Source Files\UserInteraction</Filter>
     </ClInclude>
+    <ClInclude Include="fileTransferClient.h">
+      <Filter>Source Files\FileTransfer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -52,6 +58,9 @@
     </ClCompile>
     <ClCompile Include="StudentRecordUserInteraction.cpp">
       <Filter>Source Files\UserInteraction</Filter>
+    </ClCompile>
+    <ClCompile Include="fileTransferClient.cpp">
+      <Filter>Source Files\FileTransfer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

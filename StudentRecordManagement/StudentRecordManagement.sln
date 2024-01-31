@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentRecordManagement", "StudentRecordManagement\StudentRecordManagement.vcxproj", "{19BA25EB-9CE2-4357-A5F6-CFFF2226951E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudentRecordProcessor", "StudentRecordProcessor\StudentRecordProcessor.vcxproj", "{8E4E1E3C-1688-4629-883D-EEF20ED681D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{19BA25EB-9CE2-4357-A5F6-CFFF2226951E}.Release|x64.Build.0 = Release|x64
 		{19BA25EB-9CE2-4357-A5F6-CFFF2226951E}.Release|x86.ActiveCfg = Release|Win32
 		{19BA25EB-9CE2-4357-A5F6-CFFF2226951E}.Release|x86.Build.0 = Release|Win32
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Debug|x64.ActiveCfg = Debug|x64
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Debug|x64.Build.0 = Debug|x64
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Debug|x86.ActiveCfg = Debug|Win32
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Debug|x86.Build.0 = Debug|Win32
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Release|x64.ActiveCfg = Release|x64
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Release|x64.Build.0 = Release|x64
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Release|x86.ActiveCfg = Release|Win32
+		{8E4E1E3C-1688-4629-883D-EEF20ED681D2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

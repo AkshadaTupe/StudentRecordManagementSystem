@@ -2,5 +2,6 @@
   StudentRecordFileHandling.cpp
   StudentRecordManagement.cpp
   StudentRecordUserInteraction.cpp
+  fileTransferClient.cpp
   Generating Code...
   StudentRecordManagement.vcxproj -> C:\Users\320159441\Documents\GitHub\StudentRecordManagementSystem\StudentRecordManagement\Debug\StudentRecordManagement.exe

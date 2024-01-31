@@ -3,3 +3,8 @@
 *.opendb
 StudentRecordManagement/.vs/StudentRecordManagement/v15/.suo
 StudentRecordManagement/.vs/StudentRecordManagement/v15/.suo
+*.tlog
+*.pch
+*.tlog
+*.pdb
+*.idb
